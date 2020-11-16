@@ -1,0 +1,54 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>HELP</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--     <h1>This app for Help </h1>-->
+<!--    {{insert_me}}-->
+
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Kimbo Django level twot</title>
+        <link rel="stylesheet" href={% static 'css/styke3.css' %}/>
+    </head>
+    <body>
+     <h1>Hi Welcome to Kimbo page DJANGO</h1>
+     <h2>Here are your access records:</h2>
+
+     <div class="djangotwo">
+         {% if access_records %}
+         <table>
+             <thead>
+             <th>Site Name</th>
+             <th>Date Accessed</th>
+             </thead>
+
+
+         {% for acc in access_records %}
+         <tr>
+             <td>{{ acc.name }}</td>
+             <td>{{ acc.date }}</td>
+
+         </tr>
+
+         {% endfor %}
+         </table>
+         {% else %}
+            <p>NO ACCESS RECORDS FOUND!</p>
+         {% endif %}
+
+     </div>
+
+
+<!--    <img src="{% static 'images/n83rspf_v5.jpg' %}" alt="ooooooooooooups">-->
+
+    </body>
+</html>

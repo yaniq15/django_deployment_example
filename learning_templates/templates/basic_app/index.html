@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <style>-->
+<!--.myDiv {-->
+<!--  border: 5px outset red;-->
+<!--  background-color: lightblue;-->
+<!--  text-align: center;-->
+<!--}-->
+<!--</style>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>WELCOME TO INDEX</title>-->
+<!--    <-->
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+<!--</head>-->
+
+<!--<body>-->
+<!--<div class="myDiv">-->
+<!--    <h1>WELCOME TO INDEX</h1>-->
+<!--</div>-->
+
+
+<!--</body>-->
+<!--</html>-->
+
+
+{% extends "basic_app/base.html"%}
+
+     {% block body_block %}
+<!--        <h1>WELCOME TO INDEX</h1>-->
+<!--        <h2>this is index.html page showing!</h2>-->
+        <h1>{{ text|cut:'world'}}</h1>
+        <h2>{{ number }}</h2>
+
+
+
+     {% endblock %}
